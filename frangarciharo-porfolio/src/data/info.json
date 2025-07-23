@@ -1,0 +1,15 @@
+{
+    "name": "Fran García Haro",
+    "personal-picture": "/foto.png",
+    "presentation": "19 años, actualmente cursando ciclo formativo de Desarrollo de Aplicaciones Web (DAW).",
+    "born": "13/07/2006",
+    "state": "Disponible",
+    "contact": {
+        "email": "frangaha06@gmail.com",
+        "phone": "+34 686 231 428",
+        "location": "Viladecans, Catalunya",
+        "website": "https://frangarciaharo.netlify.app",
+        "linkedin": "https://es.linkedin.com/in/frangarciaharo",
+        "github": "https://github.com/frangarciaharo"
+    }
+}

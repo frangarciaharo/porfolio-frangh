@@ -1,0 +1,100 @@
+---
+import info from "../data/info.json";
+
+// Determinar clase en el servidor
+let stateClass = "";
+if (info.state === "Disponible") {
+    stateClass = "button-disponible";
+} else if (info.state === "Trabajando") {
+    stateClass = "button-trabajando";
+}
+---
+
+<section class="presentacion">
+    <div class="presentacion-inside">
+        <div class="imagen">
+            <img src={info["personal-picture"]} alt="" />
+        </div>
+        <div class="informacion">
+            <h1>{info.name}</h1>
+            <div class="subinformacion">
+                <button class={`button-state ${stateClass}`}
+                    >{info.state}</button
+                >
+                <p class="texto-presentacion">{info.presentation}</p>
+                <a href="#" class="reedmore-presentacion">Leer Más...</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Luckiest+Guy&family=Open+Sans:ital,wdth@0,75;1,75&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+    .presentacion {
+        display: flex;
+        justify-content: center;
+    }
+    .presentacion-inside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 71px;
+        font-family: "Luckiest Guy";
+        width: 546px;
+    }
+    .imagen img {
+        border: #000 2px solid;
+        border-radius: 150%;
+    }
+
+    .informacion h1 {
+        font-size: 50px;
+        margin: 0;
+        letter-spacing: 3px;
+    }
+    .subinformacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button-state {
+        text-align: center;
+        font-family: "Luckiest Guy";
+        font-size: 20px;
+        background-color: #000;
+        color: #ffffff;
+        padding: 10px 50px;
+        border-radius: 10px;
+        width: 240px;
+    }
+
+    /* State-specific borders */
+    .button-disponible {
+        border: #11ff00 2px solid;
+    }
+
+    .button-trabajando {
+        border: rgba(255, 0, 4, 0.62) 2px solid;
+    }
+
+    .texto-presentacion {
+        color: #696868;
+        text-align: center;
+        width: 430px;
+        font-size: 24px;
+        margin: 15px 0 9px 0;
+    }
+
+    .reedmore-presentacion {
+        text-align: center;
+        font-family: "Luckiest Guy";
+        font-size: 14px;
+        background-color: #000;
+        color: #ffffff;
+        border-radius: 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+</style>

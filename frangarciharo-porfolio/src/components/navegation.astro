@@ -1,0 +1,91 @@
+---
+import info from "../data/info.json";
+const mailTo = `mailto:${info.contact.email}`;
+---
+
+<header>
+    <nav class="navegacion">
+        <a href="#">HOME</a>
+        <a href="#">SOBRE MI</a>
+        <a href="#">PROYECTOS</a>
+    </nav>
+    <div class="iconos">
+        <a href={info.contact.linkedin} target="_blank"
+            ><svg
+                width="27"
+                height="24"
+                viewBox="0 0 27 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.13 24V7.80641H0.342145V24H6.13ZM3.23605 5.59545C5.25439 5.59545 6.51064 4.35196 6.51064 2.79796C6.47303 1.20898 5.2544 0 3.27434 0C1.29449 0 0 1.20898 0 2.79796C0 4.35196 1.25598 5.59545 3.19832 5.59545H3.23605Z"
+                    fill="white"></path>
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.33264 24H15.1204V14.9568C15.1204 14.4728 15.1581 13.9893 15.3109 13.6434C15.7293 12.6764 16.6816 11.6749 18.2805 11.6749C20.3749 11.6749 21.2127 13.1599 21.2127 15.3368V24H27V14.7148C27 9.74088 24.1446 7.42641 20.3367 7.42641C17.2143 7.42641 15.8435 9.04942 15.082 10.1549H15.1206V7.80641H9.3328C9.40875 9.3259 9.33264 24 9.33264 24Z"
+                    fill="white"></path>
+            </svg>
+        </a>
+        <a href={mailTo}
+            ><svg
+                width="27"
+                height="24"
+                viewBox="0 0 27 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M2.7 24C1.9575 24 1.32188 23.7063 0.793125 23.1188C0.264375 22.5312 0 21.825 0 21V3C0 2.175 0.264375 1.46875 0.793125 0.88125C1.32188 0.29375 1.9575 0 2.7 0H24.3C25.0425 0 25.6781 0.29375 26.2069 0.88125C26.7356 1.46875 27 2.175 27 3V21C27 21.825 26.7356 22.5312 26.2069 23.1188C25.6781 23.7063 25.0425 24 24.3 24H2.7ZM13.5 13.5L24.3 6V3L13.5 10.5L2.7 3V6L13.5 13.5Z"
+                    fill="white"></path>
+            </svg>
+        </a>
+    </div>
+</header>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Luckiest+Guy&family=Open+Sans:ital,wdth@0,75;1,75&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 62px;
+    }
+
+    .navegacion {
+        display: flex;
+        gap: 36px;
+        font-family: "Luckiest Guy";
+    }
+
+    .navegacion a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .iconos {
+        display: flex;
+        gap: 36px;
+    }
+
+    .iconos a {
+        background-color: #000000;
+        padding: 10px;
+        border-radius: 100%;
+        transition: background-color 0.3s ease;
+        display: flex;
+    }
+
+    .iconos a:hover {
+        background-color: #ffffff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    }
+
+    .iconos a:hover svg path {
+        fill: #000000;
+    }
+</style>
